@@ -33,17 +33,36 @@ function writePassword() {
 
 
 function generatePassword(){  
+
   var userLength = prompt('Password Length: Please select a number from 8 - 128');
+ 
+  
+  while (isNaN(userLength) || userLength < 8 || userLength > 128){
+    alert('Not a Number between 8 - 128! Please Try Again!')
+    userLength = prompt('Password Length: Please select a number from 8 - 128')
+  }
+
   var userLower = confirm('Do you want lower-case letters?');
   var userUpper = confirm('Do you want upper-case letters?');
   var userSpecial = confirm('Do you want any special characters?');
 
-  var passLower = 'abcdefghijklmnopqrstuvwxyz'
-  var passUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  var passSpecial = '!@#$%^&*~+='
+  while (userLower === false && userUpper === false && userSpecial === false){
+    alert('You have to pick at least one parameter! Try Again!')
+    userLower = confirm('Do you want lower-case letters?');
+    userUpper = confirm('Do you want upper-case letters?');
+    userSpecial = confirm('Do you want any special characters?');
+  }
+
+  var passLower = 'abcdefghijklmnopqrstuvwxyz';
+  var passUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var passSpecial = '!@#$%^&*~+=';
+  var sum = '';
+
 
 
  
+
+
   if (userLower === true){   
     passLowerSplit = passLower.split('');
 
@@ -65,14 +84,14 @@ function generatePassword(){
 
   var passContainer = passLowerSplit.concat(passUpperSplit, passSpecialSplit);
  
-  // console.log(passContainer);
-
   for(i = 0; i < userLength; i++) {
-   passContainer.indexOf(i);
-   console.log(i);
-  }
+  var num = Math.floor(Math.random() * passContainer.length);
+  sum += passContainer[num];
 }
+return(sum);
 
+ 
+}
 
 
 
