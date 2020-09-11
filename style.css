@@ -13,8 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #8c8a87;
 }
 
 .wrapper {
@@ -27,15 +26,25 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: #262626;
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #bfbfbf;
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: #262626;
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -46,12 +55,13 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #d9d9d9;
   height: 2px;
 }
 
 .card-body {
   min-height: 100px;
+
 }
 
 .card-footer {
@@ -62,7 +72,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #d9d9d9;
   height: 2px;
 }
 
@@ -74,11 +84,10 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: #0d0d0d;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: #d9d9d9;
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -86,6 +95,9 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 button[disabled] {
@@ -112,7 +124,7 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px solid #d9d9d9;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
