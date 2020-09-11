@@ -42,9 +42,10 @@ Password generator is a browser based app. All you need to do is open the link a
 -Edge Case Testing- <br>
 Making sure that number entered is an integer between 8 and 128
 ~~~
-while (isNaN(userLength) || userLength < 8 || userLength > 128 || Number.isInteger(userLength) === false) {
-    alert('Not a whole number between 8 - 128! Please Try Again!')
-    userLength = prompt('Password Length: Please select a whole number from 8 - 128')
+while (isNaN(userLength) || userLength < 8 || userLength > 128){
+    alert('Not a whole number between 8 - 128! Please Try Again!');
+    userLength = prompt('Password Length: Please select a whole number from 8 - 128');
+  }
 }
 ~~~
 Making sure at least one condition is met. 
